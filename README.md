@@ -1,6 +1,4 @@
-# abdul-j.github.io
-
-## Abdul Jeter
+# Abdul Jeter
 A site all about me, Abdul Jeter
 
 
