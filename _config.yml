@@ -2,6 +2,7 @@ name: Abdul Jeter
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+  - jekyll-sitemap
 title: Abduls Website
 description: A site all about me, Abdul Jeter
 url: abdul-j.github.io
