@@ -52,4 +52,5 @@ li a.active {
 .gallery {
   image-display: inline-block;
   text-align: center;
+  text-decoration: none;
 }
