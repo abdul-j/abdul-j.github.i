@@ -56,3 +56,7 @@ a {
     justify-content: center;
     align-items: center;
 }
+
+.snap {
+  padding-right: 5px;
+}
