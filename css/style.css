@@ -45,13 +45,13 @@ li a.active {
     background-color: rgb(0, 153, 204);
 }
 
-.image {
-  width: 100px;
-}
-
 a {
   display: inline-block;
   text-align: center;
   text-decoration: none;
   color: white;
+}
+
+.gallery {
+    justify-content: center
 }
