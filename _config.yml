@@ -1,2 +1,5 @@
 name: Abdul Jeter
 markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  
