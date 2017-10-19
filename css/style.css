@@ -1,1 +1,48 @@
 
+  <style>
+    html {
+  background: url("/media/wallpaper.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+      color: white;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid rgb(0, 153, 204);
+    background-color: #ffffff;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+    color: black;
+    text-decoration: underline;
+}
+
+li a.active {
+    color: white;
+    background-color: rgb(0, 153, 204);
+}
+
