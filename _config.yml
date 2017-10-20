@@ -2,8 +2,12 @@ name: Abdul Jeter
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
+title: A website about me by me
 description: A site all about me, Abdul Jeter
+url: "https://www.abdul-j.github.io"
 author: Abdul Aziz Jeter
+twitter:
+  username: Onejeter
 social:
   name: Abdul Jeter
   links:
@@ -11,6 +15,7 @@ social:
     - https://www.facebook.com/bibleyj
     - https://www.instagram.com/spooky.dul
     - https://www.github.com/abdul-j
-url: "https://www.abdul-j.github.io"
 plugins:
   - jekyll-sitemap
+webmaster_verifications:
+  google: googlefae959dd83b9ac7e
