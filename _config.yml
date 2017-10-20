@@ -2,10 +2,8 @@ name: Abdul Jeter
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
-  - jekyll-sitemap
 title: Abduls Website
 description: A site all about me, Abdul Jeter
-url: abdul-j.github.io
 author: Abdul Aziz Jeter
 social:
   name: Abdul Jeter
@@ -14,3 +12,6 @@ social:
     - https://www.facebook.com/bibleyj
     - https://www.instagram.com/spooky.dul
     - https://www.github.com/abdul-j
+url: "https://www.abdul-j.github.io"
+plugins:
+  - jekyll-sitemap
