@@ -12,8 +12,19 @@
     {% seo %}
    </head>
    <body>
+    <amp-img src="/media/welcome.jpg" alt="Welcome" height="400" width="800"></amp-img>
     <script src="js/scripts.js">
     </script>
+    <style amp-custom>
+     /* any custom style goes here */
+     body {
+      background-color: white;
+     }
+     amp-img {
+      border: 1px solid #f0f0f0;
+     }
+    </style>
+
 	   
 			{{ content }}
       
