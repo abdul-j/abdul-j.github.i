@@ -1,11 +1,19 @@
+title: Abdul, the human # blog title
+tagline: A website about me by me # blog sub-titile
+author: Abdul Aziz Jeter # author name
+email: abdulj.business@gmail.com # author email
+description: "A site all about me, Abdul Jeter" # You can edit this line in _config.yml. It will appear in your document head meta and in 
+your feed.xml site description
+keywords: "" # html meta keywords
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://yulijia.net/freshman21" # the base hostname & protocol for your site
+
 name: Abdul Jeter
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
-title: A website about me by me
 description: A site all about me, Abdul Jeter
 url: "https://www.abdul-j.github.io"
-author: Abdul Aziz Jeter
 twitter:
   username: Onejeter
 social:
