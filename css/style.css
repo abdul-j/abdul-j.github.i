@@ -17,7 +17,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid rgb(0, 153, 204);
+    border: 2px solid rgb(0, 153, 204);
     background-color: #ffffff;
     position: fixed;
     top: 0;
