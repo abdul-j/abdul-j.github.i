@@ -9,7 +9,7 @@ name: Abdul Jeter
 markdown: kramdown
 plugins:
   - jekyll-seo-tag
-url: "https://www.abdul-j.github.io"
+url: "https://www.abdul-j.github.io/index.html"
 twitter:
   username: Onejeter
 social:
