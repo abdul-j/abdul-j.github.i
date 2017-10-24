@@ -6,8 +6,6 @@ baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://abdul-j.github.io" # the base hostname & protocol for your site
 name: Abdul Jeter
 markdown: kramdown
-plugins:
-  - jekyll-seo-tag
 url: "https://www.abdul-j.github.io/index.html"
 twitter:
   username: Onejeter
