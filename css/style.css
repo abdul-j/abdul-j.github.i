@@ -19,10 +19,6 @@ ul {
     overflow: hidden;
     border: 2px solid rgb(0, 153, 204);
     background-color: #ffffff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
 }
 
 li {
