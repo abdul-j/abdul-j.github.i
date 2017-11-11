@@ -11,15 +11,24 @@ title: About Abdul
 
 <div>
 
-<span itemscope itemtype="http://schema.org/Person" itemscope="" itemtype="http://schema.org/Person">
+    <h1>THE AB-FILES</h1>
 
-<h1><b itemprop="givenName">Abdul Aziz</b> <b itemprop="familyName">Jeter</b></h1>
-
-    <p>TO BE ADDED</p>
+    <p>
     
-</span>
+    On January -1st 47 BCE, a small child was born in Realm 890095.
+    The only picture of him lies here hidden from all of the omniverse.
+    You may view this secret photo of him by pressing this button.
 
-</div>    
+        
+    </p>
+    
+   <a href="javascript:;" onClick="document.getElementById('hideaway').style.display='block';" >
+   <button class="button button2">REVEAL</button>
+   </a>
+
+   <div id="hideaway" style="display:none;">Here's the hidden content</div>
+
+   </div>    
     
 <style>
   h1 {
@@ -29,4 +38,27 @@ title: About Abdul
   .bio {
   font-style: italic
   }
+  
+  body {
+  font-family: "Times New Roman", Times, serif;
+  }
+    .button {
+    background-color: rgb(0, 153, 204);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
 </style>
