@@ -59,3 +59,11 @@ a {
 .snap {
   padding-left: 35px;
 }
+
+.big {
+ font-size: 72px;
+}
+
+.large {
+  font-size: 48px;
+}
