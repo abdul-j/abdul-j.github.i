@@ -4,7 +4,7 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-      color: white;
+  color: black;
 }
 
 body {
@@ -61,9 +61,9 @@ a {
 }
 
 .big {
- font-size: 72px;
+ font-size: 64px;
 }
 
 .large {
-  font-size: 48px;
+  font-size: 40px;
 }
