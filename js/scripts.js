@@ -1,3 +1,4 @@
+ $(document).ready(function(e) {   
 var button = $('#reveal-button');
 
 var hiddenElement = $('#hideaway');
@@ -12,3 +13,5 @@ button.click(function () {
     button.text('REVEAL');
   }
 });
+
+ });
