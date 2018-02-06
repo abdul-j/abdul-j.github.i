@@ -25,6 +25,14 @@
 		background: hsl(random(360), 70%, 50%);
 	}
 }
+
+
+body {
+  color: #181818;
+  font-family: monospace, monospace;
+  font-size: 10em
+}
+
 .parallax-base div {
   opacity: .7;
   background: rgba(0, 0, 0, 0.1);
