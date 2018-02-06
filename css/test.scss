@@ -27,12 +27,6 @@
 }
 
 
-body {
-  color: #181818;
-  font-family: monospace, monospace;
-  font-size: 10em
-}
-
 .parallax-base div {
   opacity: .7;
   background: rgba(0, 0, 0, 0.1);
@@ -58,6 +52,9 @@ body {
   width: 500px;
   height: 300px;
   margin: 30px;
+  color: #181818;
+  font-family: monospace, monospace;
+  font-size: 10em
 }
 
 .layer-1 {
