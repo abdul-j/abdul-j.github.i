@@ -1,4 +1,4 @@
- $(document).ready(function(e) {   
+$(document).ready(function() {   
 var button = $('#reveal-button');
 
 var hiddenElement = $('#hideaway');
