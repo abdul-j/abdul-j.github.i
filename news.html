@@ -48,7 +48,12 @@ title: Modern Historia
   Don't ask me because I wouldn't know.
 </p>
   <!-- Inspired by: https://codepen.io/natewiley/pen/Ciwyn -->
-<script src="js/news.js"></script>
+<script type="text/javascript">
+    var ismobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+
+    if(!ismobile) document.write('<script src="js/news.js"></script>');
+
+</script>
 <div id="particle-container">
 	<div class="particle"></div>
 	<div class="particle"></div>
