@@ -68,3 +68,12 @@ a {
 .large {
   font-size: 40px;
 }
+
+   #x {
+      display: none;
+   }
+   @media ( min-width: 992px ) {
+      #x {
+         display: block;
+      }
+   }
