@@ -393,3 +393,11 @@ Media Queries Mobile Devices
     	font-size: 2.4rem;
   	}
 }
+
+.stuff {
+  background-color: #a7aaab;
+}
+
+.content {
+  padding: 10px 10px 10px 10px;
+}
