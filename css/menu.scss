@@ -1,148 +1,103 @@
 ---
 ---
 
-@import "compass/css3";
-
-//vars
-$fg:#ff4081;
-$bg:#3f51b5;
-$pi:3.14;
-
-//config
-$menu-items:5;
-$open-distance:115px;
-$opening-angle:$pi - .2;
+$size: 70px; 
+$offsetAmount: 1.1; 
+$transitionTime: 0.12s; 
 
 body{
-  background:$bg;
-  color:white;
-  text-align:center;
-}
-a{
-  color:inherit;
-}
-h1, h2, h3, h4{
-  margin:0;
-  margin-bottom:10px;
-  margin-top:10px;
-}
-h1{
-  font-size:3em;
-}
-%goo{
-  filter:url('#shadowed-goo');
-  // debug 
-  // background:rgba(255,0,0,0.2);
-}
-%ball{
-  background:$fg;
-  border-radius:100%;
-  width:80px;
-  height:80px;
-  margin-left:-40px;
-  position:absolute;
-  top:20px;
-  color:white;
-  text-align:center;
-  line-height:80px;
-  transform:translate3d(0,0,0);
-  transition:transform ease-out 200ms;
-}
-.menu-open{
-  display:none;
-}
-.menu-item{
-  @extend %ball;
-}
-.hamburger{
-  $width:25px;
-  $height:3px;
-  width:$width;
-  height:$height;
-  background:white;
-  display:block;
-  position:absolute;
-  top:50%;
-  left:50%;
-  margin-left:-$width/2;
-  margin-top:-$height/2;
-  transition:transform 200ms;
-}
-$hamburger-spacing:8px;
-.hamburger-1{
-  transform:translate3d(0,-$hamburger-spacing,0);
-}
-.hamburger-2{
-  transform:translate3d(0,0,0);
-}
-.hamburger-3{
-  transform:translate3d(0,$hamburger-spacing,0);
-}
-.menu-open:checked+.menu-open-button{
-  .hamburger-1{
-    transform:translate3d(0,0,0) rotate(45deg); 
-  }
-  .hamburger-2{
-    transform:translate3d(0,0,0) scale(0.1,1);
-  }
-  .hamburger-3{
-    transform:translate3d(0,0,0) rotate(-45deg); 
-  }
-}
-.menu{
-  @extend %goo;
-  $width:380px;
-  $height:250px;
-  position:absolute;
-  left:50%;
-  margin-left:-$width/2;
-  padding-top:20px;
-  padding-left:$width/2;
-  width:$width;
-  height:$height;
-  box-sizing:border-box;
-  font-size:20px;
-  text-align:left;
+  background-color: #33325D; 
 }
 
+ul{
+  display: block;
+  margin: 50px auto 0; 
+  width: $size; 
+  height: $size; 
+  padding: 0; 
+  position: relative; 
+}
 
-.menu-item{
-  &:hover{
-    background:white;
-    color:$fg;
+li {
+  display: block; 
+  width: $size;
+  height: $size; 
+  background-color: blue; 
+  border-radius: 50%; 
+  opacity: 0.6; 
+  mix-blend-mode: screen;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  transition: transform $transitionTime ease-out, opacity $transitionTime ease-out, color $transitionTime ease-out; 
+  cursor: pointer; 
+  text-align: center; 
+  line-height: $size; 
+  color: white; 
+  font-family: 'fontawesome'; 
+  color: transparent; 
+}
+
+/*
+li:after{
+  content: "";
+  display: block; 
+  bottom: 100%; 
+  left: 50%; 
+  height: ($offsetAmount*100%)-100; 
+  margin-left: -1px; 
+  position: absolute; 
+  width: 4px; 
+  background-color: inherit; 
+  opacity: 0; 
+  transition: opacity $transitionTime ease-out; 
+}
+*/
+li:first-child:after{
+  display: none; 
+}
+$offset:20%; 
+$colors: #004DB3, #26B85A, #FFCB00, #D88E8E;
+$transforms:  translate(0,-$offset), 
+              translate($offset,0), 
+              translate(0,$offset),
+              translate(-$offset,0);
+
+@for $i from 1 through 4{
+  li:nth-child(#{$i}){ 
+    background-color: nth($colors, $i); 
+    transform: nth($transforms, $i);
+    z-index: 4 - $i; 
+    transition-duration: $transitionTime * $i; 
   }
-  @for $i from 1 through $menu-items{
-    &:nth-child(#{$i+2}){
-      transition-duration:10ms+(60ms*($i));
-    }
+
+} 
+
+
+ul:hover{
+  height: (4*$offsetAmount) * $size; 
+  
+  li {
+    color: white; 
   }
-}
-
-.menu-open-button{
-  @extend %ball;
-  z-index:2;
-  transition-timing-function:cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  transition-duration:400ms;
-  transform:scale(1.1,1.1) translate3d(0,0,0);
-  cursor:pointer;
-}
-.menu-open-button:hover{
-  transform:scale(1.2,1.2) translate3d(0,0,0);
-}
-.menu-open:checked+.menu-open-button{
-  transition-timing-function:linear;
-  transition-duration:200ms;
-  transform:scale(0.8,0.8) translate3d(0,0,0);
-}
-
-.menu-open:checked~.menu-item{
-  transition-timing-function:cubic-bezier(0.935, 0.000, 0.340, 1.330);
-  @for $i from 1 through $menu-items{
-    $angle:(($pi - $opening-angle)/2)+(($opening-angle/($menu-items - 1))*($i - 1));
+  
+  
+  @for $i from 1 through 4{
+    li:nth-child(#{$i}){ 
+      transform: translate(0, ($i - 1)*($offsetAmount*100%));
     
-    &:nth-child(#{$i+2}){
-      transition-duration:80ms+(80ms*$i);
-      transform:translate3d(cos($angle)*$open-distance,sin($angle)*$open-distance,0);
+     &:hover{
+      opacity: 1; 
+      transition-timing-function: cubic-bezier(.5,0,.5,1);
+      transform: translate(0, ($i - 1)*($offsetAmount*100%))  scale(1.15, 1.15); 
+       transition-duration: $transitionTime*2; 
+     }
+    
     }
-  }
+    
+    li:nth-child(#{$i}):after{
+      opacity: 1; 
+      transition-delay: ($transitionTime/1.5) * $i; 
+    }
+  } 
 }
