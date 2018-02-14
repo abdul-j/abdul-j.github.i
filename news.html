@@ -2,34 +2,38 @@
 layout: news
 title: Modern Historia
 ---
-	<div class="main">
-		<h1>Full-Screen Hidden Navigation Using SVG Animations</h1>
-		<p>It works on mobile devices as well.</p>
-	</div>
-	<a href="#navi" class="navi-trigger">
-		<span class="navi-icon">
-			<svg viewBox="0 0 800 600">
-    			<path d="M300,220 C300,220 520,220 540,220 C740,220 640,540 520,420 C440,340 300,200 300,200" id="top"></path>
-    			<path d="M300,320 L540,320" id="middle"></path>
-    			<path d="M300,210 C300,210 520,210 540,210 C740,210 640,530 520,410 C440,330 300,190 300,190" id="bottom" transform="translate(480, 320) scale(1, -1) translate(-480, -318) "></path>
-  			</svg>
-		</span>
-	</a>
+	<nav class="menu">
+  <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+  <label class="menu-open-button" for="menu-open">
+    <span class="hamburger hamburger-1"></span>
+    <span class="hamburger hamburger-2"></span>
+    <span class="hamburger hamburger-3"></span>
+  </label>
+    <a href="#" class="menu-item" title="Home"> <i class="fa fa-heart"></i> </a>
+  <a href="#" class="menu-item"title="News"> <i class="fa fa-bar-chart"></i> </a>
+  <a href="#" class="menu-item" title="Contact"> <i class="fa fa-envelope"></i> </a>
+    <a href="#" class="menu-item" title="About"> <i class="fa fa-plus"></i> </a>
 
-	<!-- Hidden Navi Menu -->
-	<div id="navi" class="navi">
-		<div class="navigation-wrapper">
-			<div class="half-block">
-				<h2>Navigation</h2>
+</nav>
 
-				<nav>
-					<ul class="primary-navi">
-						<li><a href="#">Link 1</a></li>
-						<li><a href="#">Link 2</a></li>
-						<li><a href="#">Link 3</a></li>
-						<li><a href="#">Link 4</a></li>
-					</ul>
-				</nav>
-			</div>
-		</div>
-	</div>
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+      <filter id="shadowed-goo">
+          
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+          <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+          <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+          <feComposite in2="shadow" in="goo" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+      <filter id="goo">
+          <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+          <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+          <feComposite in2="goo" in="SourceGraphic" result="mix" />
+      </filter>
+    </defs>
+</svg>
