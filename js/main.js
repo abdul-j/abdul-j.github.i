@@ -1,3 +1,25 @@
+// for the menu icon
+(function() {
+	var i, resize;
+
+  	$("a").click(function() {
+    clearInterval(i);
+    return $("a").toggleClass("cross");
+  	});
+
+  	resize = function() {
+    return $("body").css({
+    // "margin-top": ~~((window.innerHeight - 150) / 2) + "px"
+    });
+  	};
+
+  	$(window).resize(resize);
+
+	resize();
+
+}).call(this)
+
+// move the front page
 jQuery(document).ready(function($){
 	var isLateralNavAnimating = false;
 	
