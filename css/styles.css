@@ -103,3 +103,7 @@ header a, a:visited {
   -webkit-animation:move-clouds-back 200s linear infinite;
   animation:move-clouds-back 200s linear infinite;
 }
+
+.menu {
+  z-index: 7;
+}
