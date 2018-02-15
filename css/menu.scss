@@ -96,6 +96,7 @@ label {
     transform: translate(-50%,-50%);
     opacity: 0;
     transition: .25s 0s ease-in-out;
+    list-style: none;
   }
   
   a {
@@ -103,6 +104,7 @@ label {
     display: block;
     color: #000;
     text-decoration: none;
+    font-size: 35px;
   }
 }
 
