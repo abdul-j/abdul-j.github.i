@@ -12,12 +12,13 @@
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
     <link href="/media/favicon.ico" rel="icon" type="image/x-icon">
     <title>{{ page.title }}</title>
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script> 
+    <script type="text/javascript" src="https://requirejs.org/docs/release/2.1.15/minified/require.js"></script> 
+    <script type="text/javascript" src="https://rawgit.com/ironwallaby/delaunay/master/delaunay.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script> 	  
+    <script type="text/javascript" src="js/scripts.js"></script> 
    </head>
    <body>
-    <div id="stars"></div>
-    <div id="stars2"></div>
-    <div id="stars3"></div>
+    <canvas id="stars" width="300" height="300"></canvas>
 
 	   
 			{{ content }}
