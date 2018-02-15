@@ -20,3 +20,5 @@ plugins:
   - jekyll-sitemap
 webmaster_verifications:
   google: googlefae959dd83b9ac7e
+gems:
+- jekyll-compass
