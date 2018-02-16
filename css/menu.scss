@@ -32,24 +32,17 @@ body {
 }
 .page {
   height: 100%;
-  background-color: $brown;
 }
 .content {
   // essential
   height: 200%; // make higher or you'll see background when rotated
   transform-origin: top left;
   transition: transform .7s $snap;
-  
-  // styling
-  background-color: $whitey;
 }
 .content_inner {
   // essential
   height: 50%; // compensate for higher .content
   overflow-y: auto; // set expected overflow
-  
-  // styling
-  padding: 50px 20%;
 }
 
 /* basically all styling from now on */
@@ -62,7 +55,7 @@ body {
   cursor: pointer;
   width: 100px;
   height: 80px;
-  background-color: $red;
+  background-color: #65909A;
   border-bottom-right-radius: 100%;
   
   &:active {
