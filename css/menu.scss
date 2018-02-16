@@ -193,6 +193,9 @@ h1 {
   padding-bottom: 15px;
   border-bottom: 1px solid #ddd;
 }
-body {
-  color: $brown;
-}
+
+.stuff {
+    text-align: center;
+    color: white;
+    position: fixed;
+    margin-left: 40%;
